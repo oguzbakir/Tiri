@@ -23,11 +23,11 @@ def dolar(bot: Bot, update: Update):
                 amount = float(message_split[1].replace(',','.'))
             except:
                 pass
-        if message.reply_to_message:
-            reply_id = message.reply_to_message.message_id
-            bot.send_message(chat_id, "{} Dolar = {} Türk Lirası".format(amount, current_rate * amount), reply_to_message_id=reply_id)
-        else:
-            bot.send_message(chat_id, "{} Dolar = {} Türk Lirası".format(amount, current_rate * amount))
+    if message.reply_to_message:
+        reply_id = message.reply_to_message.message_id
+        bot.send_message(chat_id, "{} Dolar = {} Türk Lirası".format(amount, current_rate * amount), reply_to_message_id=reply_id)
+    else:
+        bot.send_message(chat_id, "{} Dolar = {} Türk Lirası".format(amount, current_rate * amount))
     message.delete()
 
 def euro(bot: Bot, update: Update):
@@ -49,11 +49,11 @@ def euro(bot: Bot, update: Update):
                 amount = float(message_split[1].replace(',','.'))
             except:
                 pass
-        if message.reply_to_message:
-            reply_id = message.reply_to_message.message_id
-            bot.send_message(chat_id, "{} Euro = {} Türk Lirası".format(amount, current_rate * amount), reply_to_message_id=reply_id)
-        else:
-            bot.send_message(chat_id, "{} Euro = {} Türk Lirası".format(amount, current_rate * amount))
+    if message.reply_to_message:
+        reply_id = message.reply_to_message.message_id
+        bot.send_message(chat_id, "{} Euro = {} Türk Lirası".format(amount, current_rate * amount), reply_to_message_id=reply_id)
+    else:
+        bot.send_message(chat_id, "{} Euro = {} Türk Lirası".format(amount, current_rate * amount))
     message.delete()
 
 
