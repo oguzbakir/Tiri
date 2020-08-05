@@ -22,6 +22,8 @@ def getsticker(bot: Bot, update: Update):
         response = requests.get(f.file_path)
         image_bytes = io.BytesIO(response.content)
         bot.send_photo(chat_id, photo=image_bytes)
+    else:
+        bot.send_message(chat_id, "There is no sticker in replied message.")
 
 
 GETSTICKER_HANDLER = CommandHandler("getsticker", getsticker)
